@@ -11,8 +11,8 @@ from pydantic import BaseModel
 # CONFIGURATION
 # =====================================================
 
-API_KEY = "AQ.Ab8RN6J8Ud87_8dxJIjbKtFjSR6g0boYWQ2WDxmLW0FNJKFtyA"
-TAVILY_API_KEY = "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"
+API_KEY = os.getenv("GEMINI_API_KEY")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 
 if not API_KEY:
