@@ -11,17 +11,17 @@ from pydantic import BaseModel
 # CONFIGURATION
 # =====================================================
 
-API_KEY = os.getenv("GEMINI_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 
 
-if not API_KEY:
+if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY environment variable is missing.")
 
 if not TAVILY_API_KEY:
     raise ValueError("TAVILY_API_KEY environment variable is missing.")
 
-genai.configure(api_key=API_KEY)
+genai.configure(api_key=GEMINI_API_KEY)
 
 model = genai.GenerativeModel("gemini-2.5-flash")
 
