@@ -5,7 +5,7 @@ import uuid
 # ==========================================
 # CONFIGURATION
 # ==========================================
-FASTAPI_URL = "https://ai-agent-api-bf17.onrender.com/docs"
+FASTAPI_URL = "https://ai-agent-api-bf17.onrender.com/ask"
 API_KEY = "secret-123"  # FIX 1: Define the API Key
 
 st.set_page_config(
