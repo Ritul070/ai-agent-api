@@ -15,6 +15,8 @@ from slowapi.errors import RateLimitExceeded
 
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI(title="AI Agent API")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], # For production, you would put your specific Streamlit URL here
@@ -23,7 +25,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI(title="AI Agent API")
+
 
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
